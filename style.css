@@ -2,6 +2,7 @@
 
 body {
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Header */
@@ -144,11 +145,40 @@ body {
 
 /* Navbar */
 
-#navbar {
+.navbar {
     overflow: hidden;
     background-color: #333;
+    transition: 0.3s ease-in-out;
 }
 
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+/* Page content */
+.content {
+    padding: 16px;
+}
+  
+.sticky {
+    overflow: hidden;
+    background-color: #ccc;
+    
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+  
+.sticky + .content {
+    padding-top: 60px;
+}
 
 
 
@@ -215,5 +245,5 @@ body {
 
 .space {
     width: 100%;
-    height: 500px;
+    height: 250px;
 }

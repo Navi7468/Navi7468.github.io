@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+body {
+    margin: 0;
+}
+
+/* Header */
+
+#rotate-msg {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(17, 17, 17, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+.rotate-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rotate-container .phone {
+    height: 100px;
+    width: 200px;
+    border-radius: 10px;
+    border: 6px solid black;
+    background-color: #ccc;
+    animation: rotate 1.5s ease-in-out infinite alternate;
+}
+
+.rotate-container .message {
+    color: white;
+    font-size: 2em;
+    margin-top: 80px;
+} 
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(-90deg)
+    }
+    100% {
+        transform: rotate(-90deg)
+    }
+}
+
+
+
+
+.parallax {
+    background-image: url(https://picsum.photos/1940/1080);
+
+    min-height: 700px;
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.title h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 75px;
+    font-stretch: expanded;
+    color: white;
+    margin: 0;
+}
+
+
+/* Waves */
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    min-height: 100px;
+    max-height: 150px;
+}
+
+/* Wave Animation */
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+
+
+
+
+/* Navbar */
+
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+
+
+
+
+
+
+/* Shrink for Tablet */
+
+@media (max-width: 768px) {
+    .waves {
+        height: 80px;
+        min-height: 80px;
+    }
+    .title h1 {
+        font-size: 42px;
+    }
+}
+
+
+
+/* Shrink for Mobile */
+
+@media (max-width: 425px) {
+   
+    /* Phone Rotation */
+    @media only screen and (max-device-width: 812px) and (orientation: landscape) {
+        #rotate-msg {
+            display: flex;
+        }
+        
+        .phone, .message {
+            display: block;
+        }
+    }
+    
+    .parallax {
+        min-height: 400px;
+    }
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+    .title h1 {
+        font-size: 32px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.space {
+    width: 100%;
+    height: 500px;
+}

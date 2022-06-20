@@ -4,9 +4,13 @@ var navbar = document.getElementById("navbar");
 var a = document.getElementsByTagName('#navbar-link');
 var sticky = navbar.offsetTop;
 
+console.log(navbar);
+console.log(sticky);
+
 
 function myFunction() {
-    if (window.pageYOffset >= sticky) {
+    console.log(window.pageYOffset);
+    if (window.pageYOffset > sticky) {
         navbar.classList.add("sticky")
         for (var i = 0; i < a.length; i++) {
             a[i].classList.add("sticky-nav-link");

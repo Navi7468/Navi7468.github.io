@@ -279,9 +279,18 @@ body {
     font-weight: 600;
 }
 
+.button-text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
 .underline {
-    position:relative;
-    color: black    ;
+    position: relative;
+    /* color: black    ; */
 }
 
 .underline:before {
@@ -326,6 +335,8 @@ body {
     display: flex;
     gap: 30px;
     padding: 10px 0;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .button {
@@ -466,6 +477,13 @@ body {
         font-size: 25px;
         width: 15px;
         height: 15px;
+    }
+
+    .button {
+        padding: 15px 32px;
+        font-size: 13px;
+        margin: 4px 2px;
+        width: 350px;
     }
 }
 

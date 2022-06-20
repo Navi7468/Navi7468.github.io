@@ -220,17 +220,17 @@ body {
     min-height: 700px; 
     width: 720px;
     
-    background-attachment: fixed; 
+    /* background-attachment: fixed; 
     background-position: right; 
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: auto; */
 }
 
 
 .content {
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: center;
     /* flex-wrap: wrap; */
     gap: 30px;
     padding: 16px;
@@ -240,17 +240,126 @@ body {
     font-weight: 800; */
 }
 
-.content p {
+.text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.text p {
     font-size: 15px;
     color: black;
     font-weight: 800;
     width: 50%;
 }
 
+.text h1 {
+    font-size: 30px;
+    color: black;
+    font-weight: 800;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.text a {
+    color: #5f9aca;
+    text-decoration: none;
+    padding: 0 0 4px 0;
+    font-weight: 600;
+}
+
+.underline {
+    position:relative;
+    color: black    ;
+}
+
+.underline:before {
+    content:'';
+    display:block;
+    position:absolute;
+    left:0;
+    bottom:0;
+    height:2px;
+    width:0;
+    transition:width 0s ease, background .5s ease;
+}
+
+.underline:after {
+    content:'';
+    display:block;
+    position:absolute;
+    left:0;
+    bottom:0;
+    height:2px;
+    width:0;
+    background: gray;
+    transition:width .5s ease;
+}
+
+.underline:hover:before {
+    width:100%;
+    background: gray;
+    transition: width .5s ease;
+}
+
+.underline:hover::after {
+    width:100%;
+    background:black;
+}
+
 .sticky + .content {
     padding-top: 60px;
 }
 
+
+
+.fa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 30px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    font-size: xx-large;
+}
+
+.fa-instagram {
+    transition: all .5s ease-in-out;
+    background: #9f9f9f;
+    color: white;
+}
+
+.fa-instagram:hover {
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), 
+                radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), 
+                radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), 
+                radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), 
+                radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), 
+                radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), 
+                radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), 
+                linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+    /* background: #8a3ab9; */
+    color: white;
+}
+
+.fa-twitter {
+    transition: all .5s ease-in-out;
+    background: #9f9f9f;
+    color: white;
+}
+
+.fa-twitter:hover {
+    background: #55ACEE;
+    color: white;
+}
+  
 
 
 
@@ -269,6 +378,15 @@ body {
     }
     .title h1 {
         font-size: 42px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .side-parallax {
+        min-height: 400px;
+        width: 100%;
     }
 }
 
@@ -299,6 +417,8 @@ body {
     .title h1 {
         font-size: 32px;
     }
+
+
 }
 
 
@@ -315,10 +435,20 @@ body {
 
 
 
+.small-white-space {
+    width: 100%;
+    height: fit-content;
+    padding: 50px 0;
+}
 
-
+.white-space {
+    width: 100%;
+    height: fit-content;
+    padding: 150px 0;
+}
 
 .space {
+    transition: all 0.5s ease-in-out;
     width: 100%;
     height: 250px;
 }

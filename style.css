@@ -78,6 +78,28 @@ body {
     background-size: cover;
 }
 
+.parallax2 {
+    background-image: url(https://picsum.photos/1920/1080);
+    
+    min-height: 700px; 
+    
+    background-attachment: fixed; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.parallax3 {
+    background-image: url(https://picsum.photos/1930/1080);
+    
+    min-height: 700px; 
+    
+    background-attachment: fixed; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
 .title {
     position: relative;
     display: flex;
@@ -154,6 +176,12 @@ body {
 
 /* Navbar */
 
+.nav-space {
+    width: 100%; 
+    height: 50px; 
+    display: none;
+}
+
 .nav-container hr {
     border: 1px solid black;
     width: 80%;
@@ -171,6 +199,7 @@ body {
     align-items: center;
     flex-direction: row;
     transition: 0.4s ease-in-out;
+    height: fit-content;
 }
 
 .navbar-link {
@@ -350,7 +379,8 @@ body {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    width: 450px;
+    width: 80%;
+    max-width: 450px;
     /* border-radius: 10px; */
     transition: background-color 0.3s ease-in-out;
 }
@@ -421,10 +451,16 @@ body {
 /* Shrink for Tablet */
 
 @media (max-width: 768px) {
+    .parallax {
+        background-image: url(https://picsum.photos/840/880);
+        min-height: 700px;
+    }
+    
     .waves {
         height: 90px;
         min-height: 80px;
     }
+    
     .title h1 {
         font-size: 42px;
     }
@@ -442,6 +478,10 @@ body {
         font-size: 25px;
         width: 15px;
         height: 15px;
+    }
+
+    .side-parallax {
+        background-image: url(https://picsum.photos/750/640);
     }
 }
 
@@ -463,8 +503,10 @@ body {
     }
     
     .parallax {
+        background-image: url(https://picsum.photos/740/610);
         min-height: 400px;
     }
+
     .waves {
         height: 40px;
         min-height: 40px;
@@ -483,7 +525,26 @@ body {
         padding: 15px 32px;
         font-size: 13px;
         margin: 4px 2px;
-        width: 350px;
+        /* width: 350px; */
+        width: 80%;
+    }
+
+    .parallax2 {
+        background-image: url(https://picsum.photos/920/600);
+        min-height: 500px; 
+    }
+    
+    .parallax3 {
+        background-image: url(https://picsum.photos/910/600);
+        min-height: 500px; 
+    }
+    
+    .nav-space {
+        height: 90px; 
+    }
+
+    .side-parallax {
+        background-image: url(https://picsum.photos/420/440);
     }
 }
 
